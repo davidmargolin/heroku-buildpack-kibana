@@ -49,6 +49,7 @@ $mkdir $CACHE_DIR
 if [ ! -f "$CACHE_DIR/$KIBANA_PACKAGE" ]; then
   echo "downloading $DOWNLOAD_URL" | indent
   $download $DOWNLOAD_URL
+  mv $KIBANA_PACKAGE $CACHE_DIR
 fi
 
 $extract $CACHE_DIR/$KIBANA_PACKAGE
